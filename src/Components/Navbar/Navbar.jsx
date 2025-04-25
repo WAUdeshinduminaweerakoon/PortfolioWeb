@@ -6,9 +6,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full p-4 bg-[#dd9c1b] text-white">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <img src={logo} alt="logo" className="h-12 w-12 object-cover rounded-full" />
+    <nav className="w-full p-4 bg-[rgb(31,25,15)] text-white">
+      <div className="flex items-center justify-between mx-auto max-w-7xl">
+        <img src={logo} alt="logo" className="object-cover w-12 h-12 rounded-full" />
 
        
         <div className="md:hidden">
@@ -18,21 +18,21 @@ const Navbar = () => {
             <Menu size={28} onClick={() => setIsOpen(true)} className="cursor-pointer" />
           )}
         </div>
-        <ul className="hidden md:flex space-x-6 text-lg font-medium">
-          <li className="hover:text-gray-400 cursor-pointer">Home</li>
-          <li className="hover:text-gray-400 cursor-pointer">About Me</li>
-          <li className="hover:text-gray-400 cursor-pointer">Services</li>
-          <li className="hover:text-gray-400 cursor-pointer">Portfolio</li>
-          <li className="hover:text-gray-400 cursor-pointer">Contact</li>
+        <ul className="hidden space-x-6 text-lg font-medium md:flex">
+          <li className="cursor-pointer hover:text-gray-400">Home</li>
+          <li className="cursor-pointer hover:text-gray-400">About Me</li>
+          <li className="cursor-pointer hover:text-gray-400">Services</li>
+          <li className="cursor-pointer hover:text-gray-400">Portfolio</li>
+          <li className="cursor-pointer hover:text-gray-400">Contact</li>
         </ul>
 
-        <div className="hidden md:block text-sm px-4 py-2 border border-white rounded hover:bg-white hover:text-black cursor-pointer">
+        <div className="hidden px-4 py-2 text-sm border border-white rounded cursor-pointer md:block hover:bg-white hover:text-black">
           Connect With Me
         </div>
       </div>
    
       {isOpen && (
-        <div className="md:hidden mt-4 space-y-4 text-center">
+        <div className="mt-4 space-y-4 text-center md:hidden">
           <ul className="space-y-2 text-lg font-medium">
             <li>Home</li>
             <li>About Me</li>
@@ -40,7 +40,7 @@ const Navbar = () => {
             <li>Portfolio</li>
             <li>Contact</li>
           </ul>
-          <div className="text-sm px-4 py-2 border border-white rounded hover:bg-white hover:text-black cursor-pointer">
+          <div className="px-4 py-2 text-sm border border-white rounded cursor-pointer hover:bg-white hover:text-black">
             Connect With Me
           </div>
         </div>
